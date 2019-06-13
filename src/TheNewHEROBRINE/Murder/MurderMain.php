@@ -90,7 +90,7 @@ class MurderMain extends PluginBase {
         $lang = $this->getConfig()->get("language",  "eng");
         $pathToLangs = $this->getFile() . "resources" . DIRECTORY_SEPARATOR . "lang" . DIRECTORY_SEPARATOR;
         if (!file_exists($pathToLangs . "$lang.ini")) {
-            $this->getLogger()->error("No valid language has been selected. English has been auto selected.");
+            $this->getLogger()->error("Nenhum idioma válido foi selecionado. Inglês foi selecionado automaticamente.");
             $lang = "eng";
         }
         $this->language = new Config($pathToLangs . "$lang.ini", Config::PROPERTIES);
